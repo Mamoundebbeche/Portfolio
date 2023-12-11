@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Expériences Professionnelles</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .bottom-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .bottom-images img {
+            max-width: 48%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .bottom-images .right-image {
+            margin-left: auto; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Mes Expériences Professionnelles : </h1>
+
+        <h2>Trésorier, Responsable Ressources Humaines & Designer au sein du Club Poles Des Langues Esprit Monastir </h2>
+        <img src="langues.png" alt="Logo du Club Poles Des Langues" class="logo">
+        <p>Parmi les affiches que j'ai crée au sein de cet club : .</p>
+
+        <div class="bottom-images">
+            <img src="ban.jpg" alt="Image 1">
+            <img src="aff 2.JPG" alt="Image 2" class="right-image">
+        </div>
+
+        <div class="navigation-buttons">
+            <button onclick="precedent()">Précédent</button>
+            <button onclick="suivant()">Suivant</button>
+        </div>
+    </div>
+
+    <script>
+        function precedent() {
+            var clicks = localStorage.getItem('clicks') || 0;
+            clicks++;
+            
+            localStorage.setItem('clicks', clicks);
+            if (clicks === 1) {
+                window.location.href = 'parcours_academique.html';
+            } else if (clicks === 2) {
+                window.location.href = 'accueil.html';
+            }
+        }
+
+        function suivant() {
+  
+            window.location.href = 'contact.html';
+        }
+    </script>
+
+</body>
+</html>
